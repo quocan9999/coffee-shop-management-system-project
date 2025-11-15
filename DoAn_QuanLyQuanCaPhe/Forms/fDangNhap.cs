@@ -24,5 +24,21 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
             f.ShowDialog();
             this.Show();
         }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            fDangKy f = new fDangKy();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void fDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
