@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel3 = new Panel();
+            dgvDoanhthu = new DataGridView();
             panel2 = new Panel();
             btn_ShowDoanhthu = new Button();
             dtpkToDate = new DateTimePicker();
             dtpkFromDate = new DateTimePicker();
-            panel3 = new Panel();
-            dgvDoanhthu = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDoanhthu).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -50,43 +52,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(888, 473);
             panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.Controls.Add(btn_ShowDoanhthu);
-            panel2.Controls.Add(dtpkToDate);
-            panel2.Controls.Add(dtpkFromDate);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(888, 49);
-            panel2.TabIndex = 0;
-            // 
-            // btn_ShowDoanhthu
-            // 
-            btn_ShowDoanhthu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_ShowDoanhthu.Location = new Point(665, 7);
-            btn_ShowDoanhthu.Name = "btn_ShowDoanhthu";
-            btn_ShowDoanhthu.Size = new Size(127, 36);
-            btn_ShowDoanhthu.TabIndex = 2;
-            btn_ShowDoanhthu.Text = "Thống kê";
-            btn_ShowDoanhthu.UseVisualStyleBackColor = true;
-            // 
-            // dtpkToDate
-            // 
-            dtpkToDate.Anchor = AnchorStyles.Top;
-            dtpkToDate.Location = new Point(390, 12);
-            dtpkToDate.Name = "dtpkToDate";
-            dtpkToDate.Size = new Size(213, 23);
-            dtpkToDate.TabIndex = 1;
-            // 
-            // dtpkFromDate
-            // 
-            dtpkFromDate.Anchor = AnchorStyles.Top;
-            dtpkFromDate.Location = new Point(75, 12);
-            dtpkFromDate.Name = "dtpkFromDate";
-            dtpkFromDate.Size = new Size(214, 23);
-            dtpkFromDate.TabIndex = 0;
             // 
             // panel3
             // 
@@ -106,6 +71,65 @@
             dgvDoanhthu.Size = new Size(888, 424);
             dgvDoanhthu.TabIndex = 4;
             // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(btn_ShowDoanhthu);
+            panel2.Controls.Add(dtpkToDate);
+            panel2.Controls.Add(dtpkFromDate);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(888, 49);
+            panel2.TabIndex = 0;
+            // 
+            // btn_ShowDoanhthu
+            // 
+            btn_ShowDoanhthu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_ShowDoanhthu.Location = new Point(709, 7);
+            btn_ShowDoanhthu.Name = "btn_ShowDoanhthu";
+            btn_ShowDoanhthu.Size = new Size(127, 36);
+            btn_ShowDoanhthu.TabIndex = 2;
+            btn_ShowDoanhthu.Text = "Thống kê";
+            btn_ShowDoanhthu.UseVisualStyleBackColor = true;
+            // 
+            // dtpkToDate
+            // 
+            dtpkToDate.Anchor = AnchorStyles.Top;
+            dtpkToDate.Location = new Point(414, 12);
+            dtpkToDate.Name = "dtpkToDate";
+            dtpkToDate.Size = new Size(213, 23);
+            dtpkToDate.TabIndex = 1;
+            // 
+            // dtpkFromDate
+            // 
+            dtpkFromDate.Anchor = AnchorStyles.Top;
+            dtpkFromDate.Location = new Point(75, 12);
+            dtpkFromDate.Name = "dtpkFromDate";
+            dtpkFromDate.Size = new Size(214, 23);
+            dtpkFromDate.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Location = new Point(16, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(53, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Từ ngày:";
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top;
+            label2.AutoSize = true;
+            label2.Location = new Point(342, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(60, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Đến ngày:";
+            // 
             // fDoanhthu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -117,9 +141,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "fDoanhthu";
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvDoanhthu).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -132,5 +157,7 @@
         private DateTimePicker dtpkFromDate;
         private Panel panel3;
         private DataGridView dgvDoanhthu;
+        private Label label1;
+        private Label label2;
     }
 }
