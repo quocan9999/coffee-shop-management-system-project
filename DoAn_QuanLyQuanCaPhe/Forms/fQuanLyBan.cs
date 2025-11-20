@@ -270,16 +270,20 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
 
         private void menuBaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Báo cáo doanh thu đang được phát triển!", "Thông báo",
-    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        MessageBox.Show("Chức năng Báo cáo doanh thu đang được phát triển!", "Thông báo",
+            //MessageBoxButtons.OK, MessageBoxIcon.Information);
             // TODO: Mở form báo cáo doanh thu
+            fDoanhthu f = new fDoanhthu();
+            f.ShowDialog();
         }
 
         private void menuBaoCaoMonBanChay_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Báo cáo món bán chạy đang được phát triển!", "Thông báo",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Chức năng Báo cáo món bán chạy đang được phát triển!", "Thông báo",
+            //MessageBoxButtons.OK, MessageBoxIcon.Information);
             // TODO: Mở form báo cáo món bán chạy
+            fMonBanChay f = new fMonBanChay();
+            f.ShowDialog();
         }
     }
 }

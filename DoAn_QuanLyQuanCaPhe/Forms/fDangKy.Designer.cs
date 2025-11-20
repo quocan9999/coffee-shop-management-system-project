@@ -30,14 +30,14 @@
         {
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            txtXacNhanMatKhau = new TextBox();
+            lblXacNhanMatKhau = new Label();
             btnDangKy = new Button();
             txtMatKhau = new TextBox();
             txtTenDangKy = new TextBox();
             lblTitle = new Label();
             lblMatKhau = new Label();
             lblTenDangKy = new Label();
-            txtXacNhanMatKhau = new TextBox();
-            lblXacNhanMatKhau = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -65,6 +65,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(502, 416);
             panel1.TabIndex = 1;
+            // 
+            // txtXacNhanMatKhau
+            // 
+            txtXacNhanMatKhau.Location = new Point(204, 211);
+            txtXacNhanMatKhau.Margin = new Padding(4);
+            txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
+            txtXacNhanMatKhau.Size = new Size(256, 23);
+            txtXacNhanMatKhau.TabIndex = 14;
+            txtXacNhanMatKhau.UseSystemPasswordChar = true;
+            // 
+            // lblXacNhanMatKhau
+            // 
+            lblXacNhanMatKhau.AutoSize = true;
+            lblXacNhanMatKhau.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblXacNhanMatKhau.Location = new Point(48, 211);
+            lblXacNhanMatKhau.Name = "lblXacNhanMatKhau";
+            lblXacNhanMatKhau.Size = new Size(143, 20);
+            lblXacNhanMatKhau.TabIndex = 13;
+            lblXacNhanMatKhau.Text = "Xác nhận mật khẩu";
             // 
             // btnDangKy
             // 
@@ -123,25 +142,6 @@
             lblTenDangKy.Size = new Size(112, 20);
             lblTenDangKy.TabIndex = 6;
             lblTenDangKy.Text = "Tên đăng nhập";
-            // 
-            // txtXacNhanMatKhau
-            // 
-            txtXacNhanMatKhau.Location = new Point(204, 211);
-            txtXacNhanMatKhau.Margin = new Padding(4);
-            txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
-            txtXacNhanMatKhau.Size = new Size(256, 23);
-            txtXacNhanMatKhau.TabIndex = 14;
-            txtXacNhanMatKhau.UseSystemPasswordChar = true;
-            // 
-            // lblXacNhanMatKhau
-            // 
-            lblXacNhanMatKhau.AutoSize = true;
-            lblXacNhanMatKhau.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblXacNhanMatKhau.Location = new Point(48, 211);
-            lblXacNhanMatKhau.Name = "lblXacNhanMatKhau";
-            lblXacNhanMatKhau.Size = new Size(143, 20);
-            lblXacNhanMatKhau.TabIndex = 13;
-            lblXacNhanMatKhau.Text = "Xác nhận mật khẩu";
             // 
             // fDangKy
             // 
