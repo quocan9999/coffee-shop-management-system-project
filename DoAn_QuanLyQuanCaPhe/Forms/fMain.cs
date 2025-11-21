@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace DoAn_QuanLyQuanCaPhe.Forms
 {
-    public partial class fQuanLyBan : Form
+    public partial class fMain : Form
     {
-        public fQuanLyBan()
+        public fMain()
         {
             InitializeComponent();
 
@@ -256,15 +256,15 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
 
         private void menuQuanLyMon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Quản lý món đang được phát triển!", "Thông báo",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fQuanLyMon f = new fQuanLyMon();
+            f.ShowDialog();
             // TODO: Mở form quản lý món
         }
 
         private void menuQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Quản lý nhân viên đang được phát triển!", "Thông báo",
-  MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fQuanLyNhanVien f = new fQuanLyNhanVien();
+            f.ShowDialog();
             // TODO: Mở form quản lý nhân viên
         }
 
@@ -280,6 +280,12 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
             MessageBox.Show("Chức năng Báo cáo món bán chạy đang được phát triển!", "Thông báo",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
             // TODO: Mở form báo cáo món bán chạy
+        }
+
+        private void menuQuanLyDanhMuc_Click(object sender, EventArgs e)
+        {
+            fQuanLyDanhMuc f = new fQuanLyDanhMuc();
+            f.ShowDialog();
         }
     }
 }

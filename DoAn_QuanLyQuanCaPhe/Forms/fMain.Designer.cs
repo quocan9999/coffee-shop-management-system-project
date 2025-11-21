@@ -1,6 +1,6 @@
 ﻿namespace DoAn_QuanLyQuanCaPhe.Forms
 {
-    partial class fQuanLyBan
+    partial class fMain
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             menuQuanLyBan = new ToolStripMenuItem();
             menuQuanLyMon = new ToolStripMenuItem();
             menuQuanLyNhanVien = new ToolStripMenuItem();
+            quảnLýDanhMụcToolStripMenuItem = new ToolStripMenuItem();
             menuBaoCao = new ToolStripMenuItem();
             menuBaoCaoDoanhThu = new ToolStripMenuItem();
             menuBaoCaoMonBanChay = new ToolStripMenuItem();
@@ -65,7 +66,6 @@
             lblBanDangChon = new Label();
             lblBanDangChonText = new Label();
             lblThanhToanTitle = new Label();
-            quảnLýDanhMụcToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             pnlLeft.SuspendLayout();
             pnlBanInfo.SuspendLayout();
@@ -101,14 +101,14 @@
             // menuDangXuat
             // 
             menuDangXuat.Name = "menuDangXuat";
-            menuDangXuat.Size = new Size(224, 26);
+            menuDangXuat.Size = new Size(160, 26);
             menuDangXuat.Text = "Đăng xuất";
             menuDangXuat.Click += menuDangXuat_Click;
             // 
             // menuThoat
             // 
             menuThoat.Name = "menuThoat";
-            menuThoat.Size = new Size(224, 26);
+            menuThoat.Size = new Size(160, 26);
             menuThoat.Text = "Thoát";
             menuThoat.Click += menuThoat_Click;
             // 
@@ -122,23 +122,30 @@
             // menuQuanLyBan
             // 
             menuQuanLyBan.Name = "menuQuanLyBan";
-            menuQuanLyBan.Size = new Size(224, 26);
+            menuQuanLyBan.Size = new Size(211, 26);
             menuQuanLyBan.Text = "Quản lý bàn";
             menuQuanLyBan.Click += menuQuanLyBan_Click;
             // 
             // menuQuanLyMon
             // 
             menuQuanLyMon.Name = "menuQuanLyMon";
-            menuQuanLyMon.Size = new Size(224, 26);
+            menuQuanLyMon.Size = new Size(211, 26);
             menuQuanLyMon.Text = "Quản lý món";
             menuQuanLyMon.Click += menuQuanLyMon_Click;
             // 
             // menuQuanLyNhanVien
             // 
             menuQuanLyNhanVien.Name = "menuQuanLyNhanVien";
-            menuQuanLyNhanVien.Size = new Size(224, 26);
+            menuQuanLyNhanVien.Size = new Size(211, 26);
             menuQuanLyNhanVien.Text = "Quản lý nhân viên";
             menuQuanLyNhanVien.Click += menuQuanLyNhanVien_Click;
+            // 
+            // quảnLýDanhMụcToolStripMenuItem
+            // 
+            quảnLýDanhMụcToolStripMenuItem.Name = "quảnLýDanhMụcToolStripMenuItem";
+            quảnLýDanhMụcToolStripMenuItem.Size = new Size(211, 26);
+            quảnLýDanhMụcToolStripMenuItem.Text = "Quản lý danh mục";
+            quảnLýDanhMụcToolStripMenuItem.Click += menuQuanLyDanhMuc_Click;
             // 
             // menuBaoCao
             // 
@@ -479,13 +486,7 @@
             lblThanhToanTitle.Text = "KHU VỰC THANH TOÁN";
             lblThanhToanTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // quảnLýDanhMụcToolStripMenuItem
-            // 
-            quảnLýDanhMụcToolStripMenuItem.Name = "quảnLýDanhMụcToolStripMenuItem";
-            quảnLýDanhMụcToolStripMenuItem.Size = new Size(224, 26);
-            quảnLýDanhMụcToolStripMenuItem.Text = "Quản lý danh mục";
-            // 
-            // fQuanLyBan
+            // fMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -496,9 +497,9 @@
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(1140, 784);
-            Name = "fQuanLyBan";
+            Name = "fMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Quản lý bàn - Quản lý quán cà phê";
+            Text = "Main - Quản lý quán cà phê";
             FormClosing += fQuanLyBan_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

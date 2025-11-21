@@ -44,20 +44,20 @@
             colMaDM = new DataGridViewTextBoxColumn();
             colTrangThai = new DataGridViewTextBoxColumn();
             panel4 = new Panel();
+            txtTrangThai = new TextBox();
+            label7 = new Label();
+            txtDVT = new TextBox();
+            label5 = new Label();
             btnTimKiem = new Button();
-            this.txtGia = new TextBox();
-            this.txtTenSanPham = new TextBox();
-            this.txtTimKiemMon = new TextBox();
+            txtGia = new TextBox();
+            txtTenSanPham = new TextBox();
+            txtTimKiemMon = new TextBox();
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             cboDanhMuc = new ComboBox();
             txtID = new TextBox();
-            label5 = new Label();
-            txtDVT = new TextBox();
-            label7 = new Label();
-            txtTrangThai = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -90,7 +90,7 @@
             panel2.Controls.Add(Sửa);
             panel2.Controls.Add(btnThem);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 462);
+            panel2.Location = new Point(0, 663);
             panel2.Name = "panel2";
             panel2.Size = new Size(1304, 90);
             panel2.TabIndex = 1;
@@ -141,7 +141,7 @@
             panel3.Controls.Add(grvMon);
             panel3.Location = new Point(0, 40);
             panel3.Name = "panel3";
-            panel3.Size = new Size(908, 422);
+            panel3.Size = new Size(908, 623);
             panel3.TabIndex = 2;
             // 
             // grvMon
@@ -153,7 +153,7 @@
             grvMon.Location = new Point(0, 0);
             grvMon.Name = "grvMon";
             grvMon.RowHeadersWidth = 51;
-            grvMon.Size = new Size(908, 422);
+            grvMon.Size = new Size(908, 623);
             grvMon.TabIndex = 0;
             // 
             // colID
@@ -202,9 +202,9 @@
             panel4.Controls.Add(txtDVT);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(btnTimKiem);
-            panel4.Controls.Add(this.txtGia);
-            panel4.Controls.Add(this.txtTenSanPham);
-            panel4.Controls.Add(this.txtTimKiemMon);
+            panel4.Controls.Add(txtGia);
+            panel4.Controls.Add(txtTenSanPham);
+            panel4.Controls.Add(txtTimKiemMon);
             panel4.Controls.Add(label6);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(label3);
@@ -213,8 +213,40 @@
             panel4.Controls.Add(txtID);
             panel4.Location = new Point(914, 40);
             panel4.Name = "panel4";
-            panel4.Size = new Size(387, 422);
+            panel4.Size = new Size(387, 623);
             panel4.TabIndex = 3;
+            // 
+            // txtTrangThai
+            // 
+            txtTrangThai.Location = new Point(126, 343);
+            txtTrangThai.Name = "txtTrangThai";
+            txtTrangThai.Size = new Size(125, 27);
+            txtTrangThai.TabIndex = 20;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(44, 346);
+            label7.Name = "label7";
+            label7.Size = new Size(75, 20);
+            label7.TabIndex = 19;
+            label7.Text = "Trạng thái";
+            // 
+            // txtDVT
+            // 
+            txtDVT.Location = new Point(126, 229);
+            txtDVT.Name = "txtDVT";
+            txtDVT.Size = new Size(125, 27);
+            txtDVT.TabIndex = 18;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(23, 236);
+            label5.Name = "label5";
+            label5.Size = new Size(85, 20);
+            label5.TabIndex = 17;
+            label5.Text = "Đơn vị tính ";
             // 
             // btnTimKiem
             // 
@@ -227,24 +259,24 @@
             // 
             // txtGia
             // 
-            this.txtGia.Location = new Point(118, 178);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new Size(172, 27);
-            this.txtGia.TabIndex = 15;
+            txtGia.Location = new Point(118, 178);
+            txtGia.Name = "txtGia";
+            txtGia.Size = new Size(172, 27);
+            txtGia.TabIndex = 15;
             // 
             // txtTenSanPham
             // 
-            this.txtTenSanPham.Location = new Point(118, 121);
-            this.txtTenSanPham.Name = "txtTenSanPham";
-            this.txtTenSanPham.Size = new Size(172, 27);
-            this.txtTenSanPham.TabIndex = 14;
+            txtTenSanPham.Location = new Point(118, 121);
+            txtTenSanPham.Name = "txtTenSanPham";
+            txtTenSanPham.Size = new Size(172, 27);
+            txtTenSanPham.TabIndex = 14;
             // 
             // txtTimKiemMon
             // 
-            this.txtTimKiemMon.Location = new Point(58, 18);
-            this.txtTimKiemMon.Name = "txtTimKiemMon";
-            this.txtTimKiemMon.Size = new Size(182, 27);
-            this.txtTimKiemMon.TabIndex = 13;
+            txtTimKiemMon.Location = new Point(58, 18);
+            txtTimKiemMon.Name = "txtTimKiemMon";
+            txtTimKiemMon.Size = new Size(182, 27);
+            txtTimKiemMon.TabIndex = 13;
             // 
             // label6
             // 
@@ -298,49 +330,19 @@
             txtID.Size = new Size(96, 27);
             txtID.TabIndex = 6;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(23, 236);
-            label5.Name = "label5";
-            label5.Size = new Size(85, 20);
-            label5.TabIndex = 17;
-            label5.Text = "Đơn vị tính ";
-            // 
-            // txtDVT
-            // 
-            txtDVT.Location = new Point(126, 229);
-            txtDVT.Name = "txtDVT";
-            txtDVT.Size = new Size(125, 27);
-            txtDVT.TabIndex = 18;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(44, 346);
-            label7.Name = "label7";
-            label7.Size = new Size(75, 20);
-            label7.TabIndex = 19;
-            label7.Text = "Trạng thái";
-            // 
-            // txtTrangThai
-            // 
-            txtTrangThai.Location = new Point(126, 343);
-            txtTrangThai.Name = "txtTrangThai";
-            txtTrangThai.Size = new Size(125, 27);
-            txtTrangThai.TabIndex = 20;
-            // 
             // fQuanLyMon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1304, 552);
+            ClientSize = new Size(1304, 753);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            MinimumSize = new Size(1200, 800);
             Name = "fQuanLyMon";
-            Text = "fQuanLyMon";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quản lý món";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -358,7 +360,6 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DataGridView grvMon;
         private DataGridViewTextBoxColumn colID;
         private DataGridViewTextBoxColumn colTenSP;
@@ -370,9 +371,9 @@
         private Button btnXoa;
         private Button Sửa;
         private Button btnThem;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txtGia;
+        private TextBox txtTenSanPham;
+        private TextBox txtTimKiemMon;
         private Label label6;
         private Label label4;
         private Label label3;

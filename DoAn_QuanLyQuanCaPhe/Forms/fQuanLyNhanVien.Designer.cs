@@ -48,6 +48,7 @@
             Sửa = new Button();
             btnThem = new Button();
             panel4 = new Panel();
+            mtxtDate = new MaskedTextBox();
             button1 = new Button();
             txtSDT = new TextBox();
             txtGioiTinh = new TextBox();
@@ -69,7 +70,6 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            mtxtDate = new MaskedTextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grvNhanVien).BeginInit();
@@ -83,7 +83,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(953, 51);
+            panel1.Size = new Size(1182, 51);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -101,7 +101,7 @@
             panel2.Controls.Add(grvNhanVien);
             panel2.Location = new Point(0, 51);
             panel2.Name = "panel2";
-            panel2.Size = new Size(414, 367);
+            panel2.Size = new Size(643, 607);
             panel2.TabIndex = 1;
             // 
             // grvNhanVien
@@ -113,7 +113,7 @@
             grvNhanVien.Location = new Point(3, 0);
             grvNhanVien.Name = "grvNhanVien";
             grvNhanVien.RowHeadersWidth = 51;
-            grvNhanVien.Size = new Size(408, 367);
+            grvNhanVien.Size = new Size(637, 607);
             grvNhanVien.TabIndex = 0;
             // 
             // colIDNV
@@ -183,15 +183,15 @@
             panel3.Controls.Add(Sửa);
             panel3.Controls.Add(btnThem);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 424);
+            panel3.Location = new Point(0, 664);
             panel3.Name = "panel3";
-            panel3.Size = new Size(953, 89);
+            panel3.Size = new Size(1182, 89);
             panel3.TabIndex = 2;
             // 
             // btnXem
             // 
             btnXem.Anchor = AnchorStyles.Bottom;
-            btnXem.Location = new Point(631, 10);
+            btnXem.Location = new Point(746, 10);
             btnXem.Name = "btnXem";
             btnXem.Size = new Size(84, 68);
             btnXem.TabIndex = 11;
@@ -201,7 +201,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(367, 12);
+            btnXoa.Location = new Point(482, 12);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(99, 62);
             btnXoa.TabIndex = 10;
@@ -211,7 +211,7 @@
             // Sửa
             // 
             Sửa.Anchor = AnchorStyles.Bottom;
-            Sửa.Location = new Point(497, 12);
+            Sửa.Location = new Point(612, 12);
             Sửa.Name = "Sửa";
             Sửa.Size = new Size(96, 62);
             Sửa.TabIndex = 9;
@@ -221,7 +221,7 @@
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(237, 12);
+            btnThem.Location = new Point(352, 12);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(100, 62);
             btnThem.TabIndex = 8;
@@ -254,10 +254,18 @@
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(label3);
-            panel4.Location = new Point(413, 51);
+            panel4.Location = new Point(642, 51);
             panel4.Name = "panel4";
-            panel4.Size = new Size(540, 367);
+            panel4.Size = new Size(540, 607);
             panel4.TabIndex = 3;
+            // 
+            // mtxtDate
+            // 
+            mtxtDate.Location = new Point(111, 141);
+            mtxtDate.Mask = "00/00/0000";
+            mtxtDate.Name = "mtxtDate";
+            mtxtDate.Size = new Size(125, 27);
+            mtxtDate.TabIndex = 23;
             // 
             // button1
             // 
@@ -429,25 +437,19 @@
             label3.TabIndex = 1;
             label3.Text = "ID";
             // 
-            // mtxtDate
-            // 
-            mtxtDate.Location = new Point(111, 141);
-            mtxtDate.Mask = "00/00/0000";
-            mtxtDate.Name = "mtxtDate";
-            mtxtDate.Size = new Size(125, 27);
-            mtxtDate.TabIndex = 23;
-            // 
             // fQuanLyNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(953, 513);
+            ClientSize = new Size(1182, 753);
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panel3);
+            MinimumSize = new Size(1200, 800);
             Name = "fQuanLyNhanVien";
-            Text = "fQuanLyNhanVien";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quản lý nhân viên";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

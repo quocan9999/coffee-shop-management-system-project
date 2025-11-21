@@ -57,7 +57,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 47);
+            panel1.Size = new Size(1182, 47);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -75,7 +75,7 @@
             panel2.Controls.Add(grvDanhMuc);
             panel2.Location = new Point(0, 47);
             panel2.Name = "panel2";
-            panel2.Size = new Size(355, 313);
+            panel2.Size = new Size(737, 616);
             panel2.TabIndex = 1;
             // 
             // grvDanhMuc
@@ -87,7 +87,7 @@
             grvDanhMuc.Location = new Point(-3, 3);
             grvDanhMuc.Name = "grvDanhMuc";
             grvDanhMuc.RowHeadersWidth = 51;
-            grvDanhMuc.Size = new Size(358, 310);
+            grvDanhMuc.Size = new Size(740, 613);
             grvDanhMuc.TabIndex = 0;
             // 
             // colID
@@ -110,9 +110,9 @@
             panel3.Controls.Add(txtID);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(355, 47);
+            panel3.Location = new Point(737, 47);
             panel3.Name = "panel3";
-            panel3.Size = new Size(445, 313);
+            panel3.Size = new Size(445, 616);
             panel3.TabIndex = 2;
             // 
             // cboDanhMuc
@@ -155,15 +155,15 @@
             panel4.Controls.Add(Sửa);
             panel4.Controls.Add(btnThem);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 360);
+            panel4.Location = new Point(0, 663);
             panel4.Name = "panel4";
-            panel4.Size = new Size(800, 90);
+            panel4.Size = new Size(1182, 90);
             panel4.TabIndex = 3;
             // 
             // btnXem
             // 
             btnXem.Anchor = AnchorStyles.Bottom;
-            btnXem.Location = new Point(555, 11);
+            btnXem.Location = new Point(746, 11);
             btnXem.Name = "btnXem";
             btnXem.Size = new Size(100, 68);
             btnXem.TabIndex = 11;
@@ -173,7 +173,7 @@
             // btnXoa
             // 
             btnXoa.Anchor = AnchorStyles.Bottom;
-            btnXoa.Location = new Point(295, 13);
+            btnXoa.Location = new Point(486, 13);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(99, 62);
             btnXoa.TabIndex = 10;
@@ -183,7 +183,7 @@
             // Sửa
             // 
             Sửa.Anchor = AnchorStyles.Bottom;
-            Sửa.Location = new Point(421, 13);
+            Sửa.Location = new Point(612, 13);
             Sửa.Name = "Sửa";
             Sửa.Size = new Size(96, 62);
             Sửa.TabIndex = 9;
@@ -193,7 +193,7 @@
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.Bottom;
-            btnThem.Location = new Point(161, 13);
+            btnThem.Location = new Point(352, 13);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(100, 62);
             btnThem.TabIndex = 8;
@@ -204,13 +204,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1182, 753);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panel4);
+            MinimumSize = new Size(1200, 800);
             Name = "fQuanLyDanhMuc";
-            Text = "fQuanLyDanhMuc";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quản lý danh mục";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

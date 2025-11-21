@@ -19,7 +19,7 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            fQuanLyBan f = new fQuanLyBan();
+            fMain f = new fMain();
             this.Hide();
             f.ShowDialog();
             this.Show();
