@@ -18,7 +18,7 @@ namespace DoAn_QuanLyQuanCaPhe.DataAccess
         // Constructor private để đảm bảo Singleton pattern
         private DataProvider()
         {
-            connectionString = @"Server=.;Database=QuanLyQuanCaPhe;Integrated Security=true;TrustServerCertificate=true;";
+            connectionString = @"Data Source = .; Initial Catalog = QuanLyCaPhe; Integrated Security = True; TrustServerCertificate = True";
         }
 
         /// <summary>
