@@ -1,9 +1,11 @@
-﻿using System;
+﻿using DoAn_QuanLyQuanCaPhe.DataAccess.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,13 +18,25 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
         {
             InitializeComponent();
         }
-
+        bool Login(string userName, string passWord) 
+        {
+            return Account.Instance.Login(userName, passWord);
+        }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            fMain f = new fMain();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string userName = txtTenDangNhap.Text;
+            string passWord = txtMatKhau.Text;
+            if (Login(userName, passWord))
+            {
+                fMain f = new fMain();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
