@@ -51,9 +51,21 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
                     btnBan.ForeColor = Color.DarkRed;
                     btnBan.FlatAppearance.BorderColor = Color.Red;
                 }
-
                 flpBan.Controls.Add(btnBan);
             }
+        }
+
+        private void LoadComboBoxKhuVuc()
+        {
+            cboKhuVuc.Items.Clear();
+            cboKhuVuc.Items.Add("Tất cả");
+
+            List<string> khuVucList = TableDAO.Instance.LoadKhuVuc();
+            foreach (string khuVuc in khuVucList)
+            {
+                cboKhuVuc.Items.Add(khuVuc);
+            }
+            cboKhuVuc.SelectedIndex = 0;
         }
 
         private void BtnBan_Click(object sender, EventArgs e)
@@ -78,16 +90,6 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
                 dgvHoaDon.DataSource = null;
                 lblTongTien.Text = "0 VNĐ";
             }
-        }
-
-        private void LoadComboBoxKhuVuc()
-        {
-            cboKhuVuc.Items.Clear();
-            cboKhuVuc.Items.Add("Tất cả");
-            cboKhuVuc.Items.Add("Tầng trệt");
-            cboKhuVuc.Items.Add("Lầu 1");
-            cboKhuVuc.Items.Add("Lầu 2");
-            cboKhuVuc.SelectedIndex = 0;
         }
 
         private void LoadHoaDonMau()
@@ -119,22 +121,36 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
 
         private void cboKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string khuVucChon = cboKhuVuc.SelectedItem.ToString();
+            string khuVuc = cboKhuVuc.SelectedItem.ToString();
 
-            foreach (Control control in flpBan.Controls)
+            flpBan.Controls.Clear();
+
+            // Load bàn theo khu vực
+            List<Table> tableList = TableDAO.Instance.LoadTableByKhuVuc(khuVuc);
+
+            foreach (Table item in tableList)
             {
-                if (control is Button btn)
+                Button btnBan = new Button();
+                btnBan.Size = new Size(120, 80);
+                btnBan.Text = item.TenBan + "\n" + item.ViTri;
+                btnBan.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                btnBan.Margin = new Padding(5);
+                btnBan.FlatStyle = FlatStyle.Flat;
+                btnBan.FlatAppearance.BorderSize = 2;
+
+                if (item.TrangThai == 0) // Trống
                 {
-                    dynamic banInfo = btn.Tag;
-                    if (khuVucChon == "Tất cả" || banInfo.KhuVuc == khuVucChon)
-                    {
-                        btn.Visible = true;
-                    }
-                    else
-                    {
-                        btn.Visible = false;
-                    }
+                    btnBan.BackColor = Color.LightGreen;
+                    btnBan.ForeColor = Color.DarkGreen;
+                    btnBan.FlatAppearance.BorderColor = Color.Green;
                 }
+                else // Có khách
+                {
+                    btnBan.BackColor = Color.LightCoral;
+                    btnBan.ForeColor = Color.DarkRed;
+                    btnBan.FlatAppearance.BorderColor = Color.Red;
+                }
+                flpBan.Controls.Add(btnBan);
             }
         }
 

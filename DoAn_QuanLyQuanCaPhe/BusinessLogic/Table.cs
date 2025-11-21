@@ -17,6 +17,12 @@ namespace DoAn_QuanLyQuanCaPhe.BusinessLogic
         public string TenBan { get => tenBan; set => tenBan = value; }
         public string ViTri { get => viTri; set => viTri = value; }
         public int TrangThai { get => trangThai; set => trangThai = value; }
+        
+        //property chuyển đổi trạng thái sang text
+        public string TrangThaiText
+        {
+            get => TrangThai == 0 ? "Trống" : "Có khách";
+        }
 
         public Table(int iD, string tenBan, string viTri, int trangThai)
         {
