@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_QuanLyQuanCaPhe.DataAccess.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,30 @@ namespace DoAn_QuanLyQuanCaPhe.Forms
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            LoadListBan();
+            AddDanhMucBinding();
+        }
+        void LoadListBan()
+        {
+            grvDanhMuc.DataSource = DanhMucDAO.Instance.GetListDanhMuc();
+           
+        }
+        void AddDanhMucBinding()
+        {
+
+            txtID.DataBindings.Clear();
+           
+            txtDanhMuc.DataBindings.Clear();
+            txtID.DataBindings.Add(new Binding("text", grvDanhMuc.DataSource, "Id"));
+            txtDanhMuc.DataBindings.Add(new Binding("text", grvDanhMuc.DataSource, "TenDanhMuc"));
+
+
+
 
         }
     }

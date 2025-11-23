@@ -32,20 +32,18 @@
             label1 = new Label();
             panel2 = new Panel();
             grvDanhMuc = new DataGridView();
-            colID = new DataGridViewTextBoxColumn();
-            colDanhMuc = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
             panel6 = new Panel();
             label3 = new Label();
             txtID = new TextBox();
             panel5 = new Panel();
             label2 = new Label();
-            cboDanhMuc = new ComboBox();
             panel4 = new Panel();
             btnXem = new Button();
             btnXoa = new Button();
             Sửa = new Button();
             btnThem = new Button();
+            txtDanhMuc = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grvDanhMuc).BeginInit();
@@ -89,33 +87,20 @@
             grvDanhMuc.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             grvDanhMuc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grvDanhMuc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grvDanhMuc.Columns.AddRange(new DataGridViewColumn[] { colID, colDanhMuc });
             grvDanhMuc.Location = new Point(-3, 3);
             grvDanhMuc.Name = "grvDanhMuc";
             grvDanhMuc.RowHeadersWidth = 51;
             grvDanhMuc.Size = new Size(740, 613);
             grvDanhMuc.TabIndex = 0;
             // 
-            // colID
-            // 
-            colID.HeaderText = "ID";
-            colID.MinimumWidth = 6;
-            colID.Name = "colID";
-            // 
-            // colDanhMuc
-            // 
-            colDanhMuc.HeaderText = "Danh Mục";
-            colDanhMuc.MinimumWidth = 6;
-            colDanhMuc.Name = "colDanhMuc";
-            // 
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.BackColor = SystemColors.InactiveCaption;
+            panel3.Controls.Add(txtDanhMuc);
             panel3.Controls.Add(panel6);
             panel3.Controls.Add(txtID);
             panel3.Controls.Add(panel5);
-            panel3.Controls.Add(cboDanhMuc);
             panel3.Location = new Point(737, 47);
             panel3.Name = "panel3";
             panel3.Size = new Size(445, 616);
@@ -166,14 +151,6 @@
             label2.Text = "ID";
             label2.Click += label2_Click;
             // 
-            // cboDanhMuc
-            // 
-            cboDanhMuc.FormattingEnabled = true;
-            cboDanhMuc.Location = new Point(191, 125);
-            cboDanhMuc.Name = "cboDanhMuc";
-            cboDanhMuc.Size = new Size(188, 28);
-            cboDanhMuc.TabIndex = 3;
-            // 
             // panel4
             // 
             panel4.Controls.Add(btnXem);
@@ -196,6 +173,7 @@
             btnXem.TabIndex = 11;
             btnXem.Text = "Xem";
             btnXem.UseVisualStyleBackColor = false;
+            btnXem.Click += btnXem_Click;
             // 
             // btnXoa
             // 
@@ -230,6 +208,13 @@
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
             // 
+            // txtDanhMuc
+            // 
+            txtDanhMuc.Location = new Point(191, 126);
+            txtDanhMuc.Name = "txtDanhMuc";
+            txtDanhMuc.Size = new Size(188, 27);
+            txtDanhMuc.TabIndex = 6;
+            // 
             // fQuanLyDanhMuc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -263,11 +248,8 @@
         private Label label1;
         private Panel panel2;
         private DataGridView grvDanhMuc;
-        private DataGridViewTextBoxColumn colID;
-        private DataGridViewTextBoxColumn colDanhMuc;
         private Panel panel3;
         private Panel panel4;
-        private ComboBox cboDanhMuc;
         private TextBox txtID;
         private Label label3;
         private Label label2;
@@ -277,5 +259,6 @@
         private Button btnThem;
         private Panel panel5;
         private Panel panel6;
+        private TextBox txtDanhMuc;
     }
 }

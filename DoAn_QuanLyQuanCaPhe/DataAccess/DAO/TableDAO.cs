@@ -73,5 +73,10 @@ namespace DoAn_QuanLyQuanCaPhe.DataAccess.DAO
             }
             return tableList;
         }
+        private void grvQuanLyBan_SelectionChanged(object sender, EventArgs e)
+        {
+           
+        }
+
     }
 }

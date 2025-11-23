@@ -37,11 +37,8 @@
             btnThem = new Button();
             panel2 = new Panel();
             grvQuanLyBan = new DataGridView();
-            colID = new DataGridViewTextBoxColumn();
-            colTenBan = new DataGridViewTextBoxColumn();
-            colViTri = new DataGridViewTextBoxColumn();
-            colTrangThai = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
+            txtTrangThai = new TextBox();
             panel8 = new Panel();
             label5 = new Label();
             txtID = new TextBox();
@@ -51,9 +48,8 @@
             label3 = new Label();
             panel5 = new Panel();
             label4 = new Label();
-            cboTrangThai = new ComboBox();
             txtTenBan = new TextBox();
-            cboViTri = new ComboBox();
+            txtViTri = new TextBox();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -106,6 +102,7 @@
             btnXem.TabIndex = 3;
             btnXem.Text = "Xem";
             btnXem.UseVisualStyleBackColor = false;
+            btnXem.Click += btnXem_Click;
             // 
             // btnSua
             // 
@@ -153,7 +150,6 @@
             // 
             grvQuanLyBan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grvQuanLyBan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grvQuanLyBan.Columns.AddRange(new DataGridViewColumn[] { colID, colTenBan, colViTri, colTrangThai });
             grvQuanLyBan.Dock = DockStyle.Fill;
             grvQuanLyBan.Location = new Point(0, 0);
             grvQuanLyBan.Name = "grvQuanLyBan";
@@ -161,46 +157,29 @@
             grvQuanLyBan.Size = new Size(843, 542);
             grvQuanLyBan.TabIndex = 0;
             // 
-            // colID
-            // 
-            colID.HeaderText = "ID";
-            colID.MinimumWidth = 6;
-            colID.Name = "colID";
-            // 
-            // colTenBan
-            // 
-            colTenBan.HeaderText = "Tên Bàn ";
-            colTenBan.MinimumWidth = 6;
-            colTenBan.Name = "colTenBan";
-            // 
-            // colViTri
-            // 
-            colViTri.HeaderText = "Vị Trí";
-            colViTri.MinimumWidth = 6;
-            colViTri.Name = "colViTri";
-            // 
-            // colTrangThai
-            // 
-            colTrangThai.HeaderText = "Trạng Thái ";
-            colTrangThai.MinimumWidth = 6;
-            colTrangThai.Name = "colTrangThai";
-            // 
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.BackColor = SystemColors.InactiveCaption;
+            panel3.Controls.Add(txtViTri);
+            panel3.Controls.Add(txtTrangThai);
             panel3.Controls.Add(panel8);
             panel3.Controls.Add(txtID);
             panel3.Controls.Add(panel7);
             panel3.Controls.Add(panel6);
             panel3.Controls.Add(panel5);
-            panel3.Controls.Add(cboTrangThai);
             panel3.Controls.Add(txtTenBan);
-            panel3.Controls.Add(cboViTri);
             panel3.Location = new Point(843, 76);
             panel3.Name = "panel3";
             panel3.Size = new Size(433, 542);
             panel3.TabIndex = 5;
+            // 
+            // txtTrangThai
+            // 
+            txtTrangThai.Location = new Point(212, 307);
+            txtTrangThai.Name = "txtTrangThai";
+            txtTrangThai.Size = new Size(151, 27);
+            txtTrangThai.TabIndex = 12;
             // 
             // panel8
             // 
@@ -282,14 +261,6 @@
             label4.TabIndex = 6;
             label4.Text = "Trạng thái";
             // 
-            // cboTrangThai
-            // 
-            cboTrangThai.FormattingEnabled = true;
-            cboTrangThai.Location = new Point(212, 307);
-            cboTrangThai.Name = "cboTrangThai";
-            cboTrangThai.Size = new Size(151, 28);
-            cboTrangThai.TabIndex = 7;
-            // 
             // txtTenBan
             // 
             txtTenBan.Location = new Point(212, 235);
@@ -297,13 +268,12 @@
             txtTenBan.Size = new Size(151, 27);
             txtTenBan.TabIndex = 1;
             // 
-            // cboViTri
+            // txtViTri
             // 
-            cboViTri.FormattingEnabled = true;
-            cboViTri.Location = new Point(212, 108);
-            cboViTri.Name = "cboViTri";
-            cboViTri.Size = new Size(151, 28);
-            cboViTri.TabIndex = 0;
+            txtViTri.Location = new Point(212, 108);
+            txtViTri.Name = "txtViTri";
+            txtViTri.Size = new Size(151, 27);
+            txtViTri.TabIndex = 13;
             // 
             // fQuanLyBan
             // 
@@ -316,6 +286,7 @@
             Controls.Add(panel4);
             Name = "fQuanLyBan";
             Text = "fQuanLyBan";
+            Load += fQuanLyBan_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);
@@ -342,18 +313,12 @@
         private Panel panel3;
         private Label label1;
         private DataGridView grvQuanLyBan;
-        private DataGridViewTextBoxColumn colID;
-        private DataGridViewTextBoxColumn colTenBan;
-        private DataGridViewTextBoxColumn colViTri;
-        private DataGridViewTextBoxColumn colTrangThai;
         private TextBox txtTenBan;
-        private ComboBox cboViTri;
         private Label label2;
         private Button btnXem;
         private Button btnSua;
         private Button btnXoa;
         private Button btnThem;
-        private ComboBox cboTrangThai;
         private Label label4;
         private Label label3;
         private Panel panel8;
@@ -362,5 +327,7 @@
         private Panel panel7;
         private Panel panel6;
         private Panel panel5;
+        private TextBox txtTrangThai;
+        private TextBox txtViTri;
     }
 }

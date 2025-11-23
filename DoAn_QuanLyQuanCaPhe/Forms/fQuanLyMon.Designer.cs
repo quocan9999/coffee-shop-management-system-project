@@ -366,6 +366,7 @@
             txtID.Name = "txtID";
             txtID.Size = new Size(172, 27);
             txtID.TabIndex = 6;
+            txtID.TextChanged += txtID_TextChanged;
             // 
             // fQuanLyMon
             // 
@@ -380,6 +381,7 @@
             Name = "fQuanLyMon";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý món";
+            Load += fQuanLyMon_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
